@@ -39,7 +39,11 @@ $videotheque = array(
 
 echo '12.Mes films : <br>';
 //ajoutez votre code ici
-
+foreach ($videotheque as $videos) {
+    $acteurs = implode(", ", $videos['acteurs']);
+    echo "Nom du film: " . $videos["nom"] . ", date:" . $videos['date'] . ", réalisateur: " .
+        $videos['realisateur'] . ", acteurs: " . $acteurs . "<br>";
+}
 
 //----------------------------------------
 //Afficher toutes les informations de la vidéothèque
@@ -48,5 +52,7 @@ echo '12.Mes films : <br>';
 //rajoutez un synopsis
 
 echo '13.Mes films : <br>';
-//ajoutez votre code ici
+
+$videotheque[] = ['nom' => 'ironman', 'date' => '2008', 'realisateur' => 'Jon Favreau',
+                  'acteurs' => ['Robert Downey Jr', 'Mark Fergus', 'Art Marcum']];
 
